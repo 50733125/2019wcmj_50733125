@@ -147,10 +147,55 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">期末報告 << <a href='期末報告.html'>Previous</a> <a href='校園授權軟體.html'>Next</a> >> 校園授權軟體<br /><h1>w5與w13的差異</h1>
-<p>以下設計了兩個步驟 來比較兩者的差異</p>
-<p><strong><span>test_1:測試利用w13進行改版，是否會影響到w5內容。</span></strong></p>
-<p><strong><span>test_2:測試結果:利用w13資料夾同樣可進行改版，確定push之後，將w13關閉並開啟w5資料夾，進入動態系統後內容停留在w13進行改版後的前一個版本(內容與w13不同步)，可利用指令git pull將遠端最新版本下載到自己的本機端(w5資料夾)，pull完畢後再重新開啟動態網頁即可。</span></strong></p><br />期末報告 << <a href='期末報告.html'>Previous</a> <a href='校園授權軟體.html'>Next</a> >> 校園授權軟體</div>
+    <div id="tipue_search_content">圖片調整與上傳 << <a href='圖片調整與上傳.html'>Previous</a> <a href='TWAREN SSL-VPN連線教學.html'>Next</a> >> TWAREN SSL-VPN連線教學<br /><h1>利用虛擬主機開啟動態網站</h1>
+<p>1.到ubuntu網站下載Sever</p>
+<p>ubuntu網站:<a href="https://www.ubuntu.com/">https://www.ubuntu.com/</a></p>
+<p><img height="264" src="https://50733118.github.io/2019wcmj/images/a.png" width="571"/></p>
+<p><img height="176" src="https://50733118.github.io/2019wcmj/images/b.png" width="651"/></p>
+<p><span>2.打開VM--&gt;創建一台虛擬主機</span></p>
+<p><span><img height="307" src="https://50733118.github.io/2019wcmj/images/c.png" width="546"/></span></p>
+<p><span>3.設定主機名稱及分配記憶體(不建議低於2048MB)</span></p>
+<p><span><img src="https://50733118.github.io/2019wcmj/images/d.png"/></span></p>
+<p>4.Flie size通常都使用500GB,硬碟檔類型使用VMDK之後轉實體比較方便</p>
+<p>基本上我們的硬碟分配會使用動態分配(Dynamically allocated)用多少拿多少</p>
+<p>如果使用固定大小會很吃電腦的硬碟容量</p>
+<p><img src="https://50733118.github.io/2019wcmj/images/e.png"/></p>
+<p>5.設定完打開虛擬主機---&gt;載入檔案</p>
+<p><img height="433" src="https://50733118.github.io/2019wcmj/images/VirtualBox_D5dsuKgjbK.png" width="501"/></p>
+<p>6.按Start--&gt;設定</p>
+<p>選擇English語言</p>
+<p><img height="445" src="https://50733118.github.io/2019wcmj/images/vm1.png" width="529"/></p>
+<p><span>這裡不用改直接Done</span></p>
+<p><span><img height="450" src="https://50733118.github.io/2019wcmj/images/vm2.png" width="536"/></span></p>
+<p><span>這裡選第一個安裝,其他兩個是多主機雲端協同用的</span></p>
+<p><span><img height="466" src="https://50733118.github.io/2019wcmj/images/vm3.png" width="554"/></span></p>
+<p><span>這裡是網路設定,現在是以NAT,就可以直接下一步了</span></p>
+<p><span><img height="440" src="https://50733118.github.io/2019wcmj/images/vm4.png" width="523"/></span></p>
+<p>這裡是設定proxy,打上學校使用的proxy     <span> </span><a href="http://140.130.17.4:3128/">http://140.130.17.4:3128</a></p>
+<p>若不使用可留白</p>
+<p><img height="465" src="https://50733118.github.io/2019wcmj/images/vm5.png" width="554"/></p>
+<p><span>網址,保留預設就好</span></p>
+<p><span><img height="471" src="https://50733118.github.io/2019wcmj/images/6.png" width="561"/>這裡是要分割硬碟,並格式化,這裡選第一個使用整顆硬碟來格式化</span></p>
+<p><span><img height="486" src="https://50733118.github.io/2019wcmj/images/7-1.png" width="579"/></span></p>
+<p><span>這裡是要安裝的硬碟</span></p>
+<p><span><img height="509" src="https://50733118.github.io/2019wcmj/images/7-3.1.png" width="606"/></span></p>
+<p><strong><span>確認之後就可以開始格式化了</span></strong></p>
+<p><strong><img height="443" src="https://50733118.github.io/2019wcmj/images/7-6.png" width="529"/></strong></p>
+<p><strong><img height="469" src="https://50733118.github.io/2019wcmj/images/7-4.png" width="558"/></strong></p>
+<p><strong><span>再來要設定名稱和密碼</span></strong></p>
+<p><strong><span><img height="445" src="https://50733118.github.io/2019wcmj/images/7-2.png" width="531"/></span></strong></p>
+<p>這是問你要不要使用SSH key,打勾Install OpenSSH sever,就可以下一步了</p>
+<p><img alt="" height="420" src="https://50733118.github.io/2019wcmj/images/7-3.png" width="500"/></p>
+<p>這裡直接下一步</p>
+<p><img alt="" height="421" src="https://50733118.github.io/2019wcmj/images/7-5.png" width="500"/></p>
+<p>等待安裝完就完成了</p>
+<p><img alt="" height="420" src="https://50733118.github.io/2019wcmj/images/11.png" width="499"/></p>
+<p>安裝完選擇Reboot Now就可以使用了</p>
+<p><img alt="" height="419" src="https://50733118.github.io/2019wcmj/images/12.png" width="498"/></p>
+<p>剛開始進入它會叫你輸入名稱和密碼,因為使用sudo都需要登入</p>
+<p>如果要關機要打指令<span>sudo halt<span>   這是關機並沒有關電源</span></span></p>
+<p><span color="#000000">使用<span>sudo shutdown -h now   <span>關機並關電源</span></span></span></p>
+<p><span></span></p><br />圖片調整與上傳 << <a href='圖片調整與上傳.html'>Previous</a> <a href='TWAREN SSL-VPN連線教學.html'>Next</a> >> TWAREN SSL-VPN連線教學</div>
         
     <!-- footer -->
       <div class="container">
