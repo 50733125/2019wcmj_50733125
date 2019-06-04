@@ -188,7 +188,119 @@ ctx.fill()
 <p><span><img alt="ãCMSIMFLYãçåçæå°çµæ" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDRQD-FApidvxeIMa75NKwTDB6zXqa7KhQT6wk1PK_KqDb-b0w"/></span></p>
 <p>SIZE:大</p>
 <p><img alt="ãCMSIMFLYãçåçæå°çµæ" height="527" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2g7haTNrwkifYEpm9OTcexPRaEPDN0ocZcPkugi8UYTgzCWzIuw" width="758"/></p>
-<p></p><h1>簡介</h1>
+<p></p><h1>利用虛擬主機開啟動態網站</h1>
+<p>1.到ubuntu網站下載Sever</p>
+<p>ubuntu網站:<a href="https://www.ubuntu.com/">https://www.ubuntu.com/</a></p>
+<p><img height="264" src="https://50733118.github.io/2019wcmj/images/a.png" width="571"/></p>
+<p><img height="176" src="https://50733118.github.io/2019wcmj/images/b.png" width="651"/></p>
+<p><span>2.打開VM--&gt;創建一台虛擬主機</span></p>
+<p><span><img height="307" src="https://50733118.github.io/2019wcmj/images/c.png" width="546"/></span></p>
+<p><span>3.設定主機名稱及分配記憶體(不建議低於2048MB)</span></p>
+<p><span><img src="https://50733118.github.io/2019wcmj/images/d.png"/></span></p>
+<p>4.Flie size通常都使用500GB,硬碟檔類型使用VMDK之後轉實體比較方便</p>
+<p>基本上我們的硬碟分配會使用動態分配(Dynamically allocated)用多少拿多少</p>
+<p>如果使用固定大小會很吃電腦的硬碟容量</p>
+<p><img src="https://50733118.github.io/2019wcmj/images/e.png"/></p>
+<p>5.設定完打開虛擬主機---&gt;載入檔案</p>
+<p><img height="433" src="https://50733118.github.io/2019wcmj/images/VirtualBox_D5dsuKgjbK.png" width="501"/></p>
+<p>6.按Start--&gt;設定</p>
+<p>選擇English語言</p>
+<p><img height="445" src="https://50733118.github.io/2019wcmj/images/vm1.png" width="529"/></p>
+<p><span>這裡不用改直接Done</span></p>
+<p><span><img height="450" src="https://50733118.github.io/2019wcmj/images/vm2.png" width="536"/></span></p>
+<p><span>這裡選第一個安裝,其他兩個是多主機雲端協同用的</span></p>
+<p><span><img height="466" src="https://50733118.github.io/2019wcmj/images/vm3.png" width="554"/></span></p>
+<p><span>這裡是網路設定,現在是以NAT,就可以直接下一步了</span></p>
+<p><span><img height="440" src="https://50733118.github.io/2019wcmj/images/vm4.png" width="523"/></span></p>
+<p>這裡是設定proxy,打上學校使用的proxy     <span> </span><a href="http://140.130.17.4:3128/">http://140.130.17.4:3128</a></p>
+<p>若不使用可留白</p>
+<p><img height="465" src="https://50733118.github.io/2019wcmj/images/vm5.png" width="554"/></p>
+<p><span>網址,保留預設就好</span></p>
+<p><span><img height="471" src="https://50733118.github.io/2019wcmj/images/6.png" width="561"/>這裡是要分割硬碟,並格式化,這裡選第一個使用整顆硬碟來格式化</span></p>
+<p><span><img height="486" src="https://50733118.github.io/2019wcmj/images/7-1.png" width="579"/></span></p>
+<p><span>這裡是要安裝的硬碟</span></p>
+<p><span><img height="509" src="https://50733118.github.io/2019wcmj/images/7-3.1.png" width="606"/></span></p>
+<p><strong><span>確認之後就可以開始格式化了</span></strong></p>
+<p><strong><img height="443" src="https://50733118.github.io/2019wcmj/images/7-6.png" width="529"/></strong></p>
+<p><strong><img height="469" src="https://50733118.github.io/2019wcmj/images/7-4.png" width="558"/></strong></p>
+<p><strong><span>再來要設定名稱和密碼</span></strong></p>
+<p><strong><span><img height="445" src="https://50733118.github.io/2019wcmj/images/7-2.png" width="531"/></span></strong></p>
+<p>這是問你要不要使用SSH key,打勾Install OpenSSH sever,就可以下一步了</p>
+<p><img alt="" height="420" src="https://50733118.github.io/2019wcmj/images/7-3.png" width="500"/></p>
+<p>這裡直接下一步</p>
+<p><img alt="" height="421" src="https://50733118.github.io/2019wcmj/images/7-5.png" width="500"/></p>
+<p>等待安裝完就完成了</p>
+<p><img alt="" height="420" src="https://50733118.github.io/2019wcmj/images/11.png" width="499"/></p>
+<p>安裝完選擇Reboot Now就可以使用了</p>
+<p><img alt="" height="419" src="https://50733118.github.io/2019wcmj/images/12.png" width="498"/></p>
+<p>剛開始進入它會叫你輸入名稱和密碼,因為使用sudo都需要登入</p>
+<p>如果要關機要打指令<span>sudo halt<span>   這是關機並沒有關電源</span></span></p>
+<p><span color="#000000">使用<span>sudo shutdown -h now   <span>關機並關電源</span></span></span></p>
+<p><span></span></p><h1>TWAREN SSL-VPN連線教學</h1>
+<p>點擊<strong><a href="https://drive.narlabs.org.tw/navigate/s/8F663EC143514CF295FCB53B5B228956GUY">連結</a></strong>後，選取與自己系統相容的檔案並下載。</p>
+<p><img alt="" height="282" src="https://50733141.github.io/2019wcmj/images/chrome_BU6QoDjgsm.png" width="600"/></p>
+<p>下載下來後執行並安裝</p>
+<p><img alt="" height="369" src="https://50733141.github.io/2019wcmj/images/chrome_mEAbWrfBAC.png" width="500"/></p>
+<p>在搜尋中輸入Network Connect並開啟</p>
+<p><img alt="" height="542" src="https://50733141.github.io/2019wcmj/images/chrome_D9B3Eh0lPm.png" width="400"/></p>
+<p>輸入網址:https://sslvpn.nfu.edu.tw/nfu</p>
+<p><img caption="false" height="364" src="https://50733141.github.io/2019wcmj/images/dsNetworkConnect_qybJCjmu3J.png" width="400"/></p>
+<p>輸入學號及校務行政密碼後登入</p>
+<p><img alt="" height="364" src="https://50733141.github.io/2019wcmj/images/dsNetworkConnect_M4WVM1vw1d.png" width="400"/></p>
+<p>點選是</p>
+<p><img alt="" height="366" src="https://50733141.github.io/2019wcmj/images/dsNetworkConnect_pvu57Dgcap.png" width="400"/></p>
+<p>第三排第二個顯示已連線表示已成功連線。</p>
+<p><img caption="false" height="150" src="https://50733141.github.io/2019wcmj/images/qHnyv1IUYK.png" width="200"/></p>
+<div><span></span></div>
+<div><span>以下內容取自<a href="https://nfucc.nfu.edu.tw/index.php/zh/download/download-network/ssl-vpn">https://nfucc.nfu.edu.tw/index.php/zh/download/download-network/ssl-vpn</a></span></div>
+<div><span>2-2: IE網認證</span></div>
+<blockquote>
+<div><span>1.請在IE瀏覽器上按下右鍵 使用"以系統管理員身分執行"</span></div>
+<div><span>登入頁面請輸入： <a href="https://sslvpn9.twaren.net/nfu">https://sslvpn9.twaren.net/nfu</a>，輸入校務行政帳號密碼</span><span>進行身份確認。</span><br/><span><span><span></span></span></span></div>
+<div><span></span></div>
+<div><span><img alt="1" caption="false" src="https://nfucc.nfu.edu.tw./images/image/sslvpn/Web/1.jpg" width="300"/></span></div>
+<div><span></span></div>
+<div><span><img alt="2" caption="false" height="370" src="https://nfucc.nfu.edu.tw./images/image/sslvpn/Web/2.JPG" width="600"/></span></div>
+<div><span></span></div>
+<div><span>2.點選「開始」 </span></div>
+<div><span><img alt="3" caption="false" height="370" src="https://nfucc.nfu.edu.tw./images/image/sslvpn/Web/3.jpg" width="600"/></span></div>
+<div><span>3.點選「是」，SSL VPN程式安裝完畢後，就會開始跟你的電腦建立連線，請稍後一段時間。</span></div>
+<div>
+<p><span><img alt="5" caption="false" height="370" src="https://nfucc.nfu.edu.tw./images/image/sslvpn/Web/5.jpg" width="600"/></span></p>
+</div>
+</blockquote>
+<div><hr size="2" width="100%"/></div>
+<div><span><strong> </strong></span></div>
+<blockquote>
+<div><span> <strong>5. </strong><strong>VPN</strong><strong>連線建立完成</strong></span></div>
+</blockquote>
+<blockquote><span>連線建立完成後，在電腦的工作列上(桌面右下角)，會出現 Juniper Network Connect VPN Client的圖示，表示VPN連線已經成功的建立在你的電腦上了。點擊圖示兩下，即可查看連線資訊。<span>(註:指派IP:一定為120.113.100.XX)</span>。</span><br/><span>到此，您的SSL-VPN連線已經成功的建立，不管是在家裡還是出差，您的電腦就像在學校使用一般，您可以自由的使用虎尾科技大學自己擁有的網路資源。</span>
+<div><span><img alt="153.png" caption="false" src="https://nfucc.nfu.edu.tw./images/153.png" width="600"/></span></div>
+</blockquote>
+<div><hr size="2" width="100%"/></div>
+<div><span><strong>6. </strong><strong>連線IP檢視</strong>(*)</span></div>
+<blockquote>
+<div><span>如何得知連線的 IP 究竟是什麼呢？您可透過網際網路上提供 IP 位址偵測服務的網站進行確認，例如 <a href="http://showip.net/" target="_blank" title="Show IP"><span>http://showip.net/</span></a></span></div>
+<div><span><img alt="15313.png" caption="false" src="https://nfucc.nfu.edu.tw./images/15313.png" width="600"/></span></div>
+</blockquote><h1>網管課程任務</h1>
+<p><strong><span>期末報告類別</span></strong><br/><br/><span>2019 年 Spring 的網際內容管理課程已經到了最後執行分組期末報告的階段, 總共可以分為兩個大類:</span></p>
+<ol>
+<li><strong><span>持續強化網際內容與系統的可用性</span></strong></li>
+<li><strong><span>深入了解網際內容管理系統的配置環境</span></strong><strong><span></span></strong></li>
+</ol>
+<p><strong><span>持續強化網際內容與系統的可用性</span></strong><br/><br/><span>此類期末報告的任務, 在將更多適合機械設計與精密機械工程使用的 Javascript 導向內容, 放入 CMSimfly, 並且讓各種裝置都能順利閱讀.</span><br/><br/><span>此任務目前已經將 Bootstrap 前端框架配置到 CMSimfly, 其倉儲位於:</span><br/><br/><a href="https://github.com/scrum-1/wcm2019">https://github.com/scrum-1/wcm2019</a><br/><br/><span>網頁則位於:</span><br/><br/><a href="http://cpgx.kmol.info/wcm2019">http://cpgx.kmol.info/wcm2019</a><br/><br/><span>在此一類別所能進行的期末報告, 可以透過組員的協同, 將</span><br/><br/></p>
+<div><a href="https://github.com/BlackrockDigital">https://github.com/BlackrockDigital</a></div>
+<div>與</div>
+<div><a href="https://themewagon.com/theme_tag/bootstrap-4-templates/">https://themewagon.com/theme_tag/bootstrap-4-templates/</a></div>
+<div>各式 Template 導入 CMSimfly, 讓未來的使用者可以根據不同環境需求, 選擇不同的靜態網頁模板.</div>
+<p><span>至於內容的強化則可根據</span><a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%B8%89.html">實習任務三</a><span>的引導, 將更多設想中的動態 Javascript 模擬或遊戲內容, 放入各組的 CMSimfly 網站中.</span><br/><br/><strong><span>深入了解網際內容管理系統的配置環境</span></strong></p>
+<div></div>
+<div>此類期末報告的任務, 在利用 Virtualbox 中的 Ubuntu 操作系統, 配置一套可以動態啟動的虛擬網際內容管理系統, 並學習如何在虛擬操作系統與實體操作系統中配置 CMSimfly 網際內容管理系統. 相關規劃可以參考: <a href="https://2019wcm.blogspot.com/2019/04/virtualbox.html">https://2019wcm.blogspot.com/2019/04/virtualbox.html</a></div><h1>電腦初學者的網際內容管理</h1>
+<div class="post-body entry-content" id="post-body-8100707464249811474" itemprop="description articleBody"><span>第一步</span><br/><span><br/></span><span>網路連線設定</span><br/><br/>了解機械設計系電腦輔助設計室電腦的網路設定, 其中包括 IPv4 網路與 IPv6 網路設定.<br/><br/>正常情況下, 電腦輔助設計室中的 64 台電腦透過 IPv4 協定下的 DHCP 與 NAT 上網, 各電腦以 DHCP client 取得 192.168.1.* 的網路位址, 然後以 NAT 的一組外部 IP 上網, 通常必須設定 Proxy Server 為 http://proxy.kmol.info:3128 後上網會比較順暢, 但若 8 台 Proxy Servers 無法正常運作時, 則取消 Proxy Server 的設定.<br/><br/><span>瀏覽器代理主機設定</span><br/><br/>了解如何設定 Google Chrome 與 Firefox 瀏覽器的代理主機設定.<br/><br/><span>申請 Github 帳號</span><br/><br/>利用 Gmail 帳號申請 Github 帳號, 申請後利用電子郵箱收信進行確認後, 就可以在 Github 上建立倉儲.<br/><br/><span>第二步</span><br/><br/><span>配置可攜程式環境</span><br/><br/>取得 Windows 10 64 位元環境下的可攜程式環境 (<a href="https://drive.google.com/open?id=1_TQBw1PM7jxrmtsBjvLKbjJWfGs8Ug79">下載  2019_cdb_w5.7z</a>), 下載後解開目錄, 放入 USB3.0 規格以上的隨身碟或隨身硬碟.<br/><br/>以滑鼠點擊 start.bat 開啟可攜隨身系統, 以 stop.bat 關閉可攜隨身系統, 隨身碟必須在關閉所有應用程式執行下, 才可正常退出.<br/><br/>了解基本的 DOS (Disk Operating System) 指令<br/><br/>C:\&gt; 符號為 DOS 命令列視窗的回應 (Prompt), 表示目前在 C 槽硬碟的 \ 根目錄, 若要切換到 Y 槽, 則在電腦的回應後, 輸入 Y:, 命令列將轉為<br/><br/>Y:\&gt;<br/><br/>若要更換目錄, 則使用 cd, 也就是 change directory 的意思, 例如:<br/><br/>Y:\&gt;cd tmp<br/><br/>表示要從 Y 槽的根目錄更換到 tmp 目錄, 也就是<br/><br/>Y:\tmp&gt;<br/><br/>若要再回到 Y 槽的根目錄, 可以使用 cd ..<br/><br/>表示要從目前所在目錄, 往上跳回一個目錄, 也就是重新回到 Y 槽的根目錄.<br/><br/>另外, 無論目前位於哪一個子目錄, 也可以使用 cd \<br/><br/>直接回到根目錄.<br/><br/>或者從 Y:\&gt; 直接使用<br/><br/>cd \tmp\repo\ssh\wcm2019<br/><br/>直接從 Y 槽的根目錄, 跳進 Y:\tmp\repo\ssh\wcm2019&gt;<br/><br/>此外, 常用的 DOS 指令有:<br/><br/>dir - 列出目前所在目錄的內容<br/><br/>mkdir - 隨後加上要建立目錄的名稱, 可以建立目錄<br/><br/>cls - clear screen, 清除目前的命令列顯示的內容<br/><br/><span>第三步</span><br/><br/><span>建立 Git 倉儲, 並 clone 倉儲至近端工作後, 對遠端倉儲改版</span><br/><span><br/></span>可攜程式系統中已經內建 git, 可以在啟動 start.bat 後, 透過 path 的設定, 直接執行 git 指令.<br/><br/>建立 Git 倉儲, 共分為兩類, 一類是直接在 Github 網際介面下建立倉儲時, 要求建立 README.md 檔案, 之後可以直接在近端, 以 git clone 加上倉儲連線 URL, 將倉儲克隆一份到近端, 並以最新版本作為工作目錄, 使用者改版後, 可以直接透過 git add, commit 與 push 對遠端倉儲改版.<br/><br/>另一類則是故意在 Github 網際介面下建立倉儲時, 不要建立任何檔案, 而是在近端自行利用 git 指令建立倉儲架構, 新增內容後, 以 git remote add 設法在近端倉儲中納入 origin URL 後, 將近端倉儲版本新增提交推送到遠端.<br/><br/><span>git add</span><br/><br/>git add 可以用來新增一個檔案, 數個檔案, 或在之前提交後所新增的所有內容.<br/><br/>git add 在 GIT 架構下, 是對所新增或修改的內容拍快照:<br/><br/>
+<blockquote class="tr_bq">git add . adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit . Any files matching the patterns in the .gitignore file will be ignored by git add</blockquote>
+<br/><span>git commit </span><br/><br/>git commit 執行之前, 必須使用 git config 建立臨時或永久的身分註記, 因為 GIT 在展開所有改版內容時, 必須明確登錄這些變更的作者與時間.<br/><br/>當使用者採用 git commit -m "改版說明訊息", 此次提交到 .git 目錄下的更動內容, 均會綁定使用者身分與改版所輸入的說明訊息.<br/><br/><span>git push</span><br/><br/>git push 在隨後沒有輸入遠端 URL 代號時, 表示要推送到 origin, 若透過 git remote add 設定其他代號與 URL 對應時, git push 加上代號, 就可以將此次的提交內容, 推送到指定的 URL 所在遠端倉儲.<br/><br/><span>第四步</span><br/><span><br/></span><span>自行建立靜態內容管理網站</span><br/><br/>利用 CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly</a>) 內容, 建立自己的<span> </span><a href="https://pages.github.com/">Github Pages</a><span> </span>網站<br/><br/><span>第五步</span><br/><span><br/></span><span>管理網站內容</span><br/><br/>學習如何使用 CMSimfly, 在網站中加入各種內容<br/><br/><span>第六步</span><br/><span><br/></span><span>使用 Flask, bs4 與 lxml 模組</span><br/><br/>了解 CMSimfly 如何建構, 並且嘗試修改現有功能, 除錯或建立自己的網際內容管理系統</div>
+<div class="post-body entry-content" itemprop="description articleBody"></div>
+<p><br/><strong><strong>進階內容<strong></strong><br/><br/><span>第七步</span><br/><span><br/></span><span>虛擬主機下的類 Github 網站</span><br/><br/>如何利用<span> </span><a href="https://www.fossil-scm.org/">Fossil SCM</a>, 在<span> </span><a href="https://www.virtualbox.org/">Virtualbox</a><span> </span>中的<span> </span><a href="https://drive.google.com/open?id=1yjWQ5e6AGaio2ZvclONKEwIfSMtY2gSz">Ubuntu 18.04-2</a> (8.5 GB) 建立類似 Github 的系統, 可以放入 CMSimfly 的靜態網頁<br/><br/><span>第八步</span><br/><span><br/></span><span>實體主機下的網際內容管理</span><br/><br/>如何在實體主機上安裝<span> </span><a href="https://www.ubuntu.com/">Ubuntu</a><span> </span>18.04 (<a href="https://www.ubuntu.com/about/release-cycle">https://www.ubuntu.com/about/release-cycle</a>), 配置網路連線, 然後架構<span> </span><a href="https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html">uwsgi</a><span> </span>環境下的 CMSimfly 動態網站, 或建立 Fossil SCM 用來伺服管理 CMSimfly 下有版次管理的靜態網頁, 或利用<span> </span><a href="https://nginx.org/en/">nginx</a><span> </span>伺服無版次管理的 CMSimfly 靜態網頁.</strong></strong></p><h1>簡介</h1>
 <p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
 <p><img alt="" height="471" src="/images/gocycle4.png" width="587"/></p><h1>目錄結構</h1>
 <p>CMSimfly 的動態系統採用 Python3 + Flask 建構, 並且利用 Beatifulsoup 解讀位於 contig 目錄中的 content.htm 超文件檔案.</p>
